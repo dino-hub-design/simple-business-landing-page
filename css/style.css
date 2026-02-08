@@ -58,3 +58,17 @@ section {
 .btn:hover {
   background: #555;
 }
+.services ul {
+  list-style: none;
+  padding: 0;
+}
+
+.services li {
+  margin: 10px 0;
+}
+.footer {
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+  margin: 60px 0 20px;
+}
