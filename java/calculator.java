@@ -1,20 +1,20 @@
-import java.util.Scanner;
-
 public class Calculator {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter bill amount: ");
-        double bill = sc.nextDouble();
+    // Calculate total with tax
+    public static double calculateTotal(double amount, double taxRate) {
+        return amount + (amount * taxRate);
+    }
 
-        System.out.print("Enter number of people: ");
-        int people = sc.nextInt();
-
+    // Split bill between people
+    public static double splitBill(double total, int people) {
         if (people <= 0) {
-            System.out.println("Invalid number of people");
-        } else {
-            System.out.println("Each person pays: " + (bill / people));
+            throw new IllegalArgumentException("Number of people must be greater than zero.");
         }
-        sc.close();
+        return total / people;
+    }
+
+    // Calculate percentage discount
+    public static double applyDiscount(double amount, double discountPercent) {
+        return amount - (amount * discountPercent / 100);
     }
 }
