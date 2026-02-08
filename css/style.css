@@ -72,3 +72,6 @@ section {
   color: #777;
   margin: 60px 0 20px;
 }
+html {
+  scroll-behavior: smooth;
+}
